@@ -1,0 +1,19 @@
+{
+  "name": "sandbox",
+  "version": "1.0.0",
+  "description": "this is a sandbox for basic NodeJS",
+  "main": "Fibonacci.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lonniechen/nodeJS-sandbox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lonniechen/nodeJS-sandbox/issues"
+  },
+  "homepage": "https://github.com/lonniechen/nodeJS-sandbox#readme"
+}
