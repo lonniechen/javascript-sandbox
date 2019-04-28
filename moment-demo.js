@@ -1,3 +1,5 @@
+console.log("-----------------------------------------------------------------------------------");
+
 var moment = require("moment");
 
 // moment() returns the current time
@@ -5,8 +7,7 @@ var moment = require("moment");
 console.log(moment().format());
 console.log(moment().format("DD/MM/YYYY HH:mm:ss"));
 
-console.log();
-console.log();
+console.log("-----------------------------------------------------------------------------------");
 
 // convert given time to specific format
 var time = "16/04/2019 12:00:00";
@@ -14,8 +15,7 @@ var time = "16/04/2019 12:00:00";
 console.log(moment(time,"DD/MM/YYYY HH:mm:ss").format());
 console.log(moment(time,"DD/MM/YYYY HH:mm:ss").format("YYYY/MM/DD HH:mm:ss"));
 
-console.log();
-console.log();
+console.log("-----------------------------------------------------------------------------------");
 
 // add duration to a time object
 time = moment(time,"DD/MM/YYYY HH:mm:ss");
@@ -26,13 +26,12 @@ console.log(time1.format("DD/MM/YYYY HH:mm:ss"));
 console.log(time2.format("DD/MM/YYYY HH:mm:ss"));
 console.log(time3.format("DD/MM/YYYY HH:mm:ss"));
 
-time1.add(1,"seconds");
+time1.add(-1,"seconds");
 console.log(time1.format("DD/MM/YYYY HH:mm:ss"))
 
-console.log();
-console.log()
+console.log("-----------------------------------------------------------------------------------");
 
 // calculate the difference between two time object
-console.log(time1.diff(time));
-console.log(time2.diff(time));
-console.log(time3.diff(time));
+console.log(time1.diff(time,"seconds"));
+console.log(time2.diff(time,"minutes"));
+console.log(time3.diff(time,"hours"));
