@@ -28,10 +28,10 @@ console.log("-------------------------------------------------------------------
 
 
 // nested function
-function outerFunction(){
+function outerFunction() {
     var outerTemp = 0;
 
-    function innerFunction(){
+    function innerFunction() {
         var innerTemp = 1;
         console.log(outerTemp);
     }
@@ -47,9 +47,9 @@ outerFunction();
 console.log("-----------------------------------------------------------------------------------");
 
 // a way to read the local var outside of a function
-function f1(){
+function f1() {
     var temp = 999;
-    function f2(){
+    function f2() {
         temp++;
         return temp;
     }
@@ -58,7 +58,7 @@ function f1(){
 
 var result = f1();
 console.log(result());
-console.log(result()+1);
+console.log(result() + 1);
 
 console.log("-----------------------------------------------------------------------------------");
 
