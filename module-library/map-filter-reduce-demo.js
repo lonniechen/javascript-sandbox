@@ -30,7 +30,7 @@ console.log(`\x1b[33m%s\x1b[0m`, `-----------------------------`);
 // reduce
 var reduceExample = transaction.reduce((sum, data) => {
     return sum + data.amount;
-}, 1) // inital value is set to 1
+}, 1) // inital value is set to 1, only for demonstrating purpose
 // var reduceExample2 = transaction.reduce((sum, data) => sum + data.amount, 1) // equivalent
 console.log(reduceExample);
 console.log(`\x1b[33m%s\x1b[0m`, `-----------------------------`);
