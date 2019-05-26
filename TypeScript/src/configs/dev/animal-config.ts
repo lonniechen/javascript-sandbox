@@ -1,4 +1,4 @@
-import Animal = require("../../classes/animal");
+var Animal = require("../../classes/animal");
 
 module.exports = {
     Dog: new Animal.Dog("Dennis", 2),

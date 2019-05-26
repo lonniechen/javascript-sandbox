@@ -1,4 +1,14 @@
 const animal = require("../configs")
 
-animal.Dog.bark();
-animal.Cat.meow();
+const playWithDog = () => {
+    animal.Dog.bark();
+}
+
+const playWithCat = () => {
+    animal.Cat.meow();
+}
+
+module.exports = {
+    playWithDog,
+    playWithCat
+}
