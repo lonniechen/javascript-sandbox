@@ -11,37 +11,41 @@ const transaction = [
 ]
 
 // map
-var mapExample = transaction.map((data) => {
+logger.log(constants.loggingType.info, "map")
+const mapExample = transaction.map((data) => {
     return data.amount;
 });
-// var mapExample2 = transaction.map(data => data.amount); // an equivalent solution
+// const mapExample2 = transaction.map(data => data.amount); // an equivalent solution
 console.log(mapExample);
 
 // filter
-var filterExample = transaction.filter((data) => {
+logger.log(constants.loggingType.info, "filter")
+const filterExample = transaction.filter((data) => {
     return data.date === "Jan";
 })
-// var filterExample2 = transaction.filter(data => data.date === "Jan"); // equivalent
+// const filterExample2 = transaction.filter(data => data.date === "Jan"); // equivalent
 console.log(filterExample);
 
 // reduce
-var reduceExample = transaction.reduce((sum, data) => {
+logger.log(constants.loggingType.info, "reduce")
+const reduceExample = transaction.reduce((sum, data) => {
     return sum + data.amount;
 }, 1) // inital value is set to 1, only for demonstrating purpose
-// var reduceExample2 = transaction.reduce((sum, data) => sum + data.amount, 1) // equivalent
+// const reduceExample2 = transaction.reduce((sum, data) => sum + data.amount, 1) // equivalent
 console.log(reduceExample);
 
 // application 
+logger.log(constants.loggingType.info, "application")
 // find out the transaction with lowest cost
-var lowestCostTransaction = transaction.reduce((result, data) => {
+const lowestCostTransaction = transaction.reduce((result, data) => {
     return (result.amount || 999999) < data.amount ? result : data;
 }, {});
 console.log(lowestCostTransaction);
 
 // find out the total cost in Feb
-var transactionInFeb = transaction.filter(data => data.date === "Feb");
-var sum = transactionInFeb.reduce((sum, data) => {
+const transactionInFeb = transaction.filter(data => data.date === "Feb");
+const sum = transactionInFeb.reduce((sum, data) => {
     return sum + data.amount;
 }, 0)
-// var sum2 = transaction.filter(data => data.date === "Feb").reduce((sum, data) => sum + data.amount, 0); //equivalent
+// const sum2 = transaction.filter(data => data.date === "Feb").reduce((sum, data) => sum + data.amount, 0); //equivalent
 console.log(sum); // 200 + 400 + 3000

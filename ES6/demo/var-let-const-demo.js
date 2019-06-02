@@ -2,7 +2,7 @@ const logger = require('../service/logger')
 const constants = require('../service/constants')
 
 // scope of block
-logger.log(constants.loggingType.info, "scope of block")
+logger.log(constants.loggingType.info, "scope")
 {
     let a1 = 1;
     var a2 = 2;
