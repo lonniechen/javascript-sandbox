@@ -1,8 +1,8 @@
-const logger = require('../service/logger')
-const constants = require('../service/constants')
+const logger = require('../service/logger');
+const constants = require('../service/constants');
 
 // scope of block
-logger.log(constants.loggingType.info, "scope")
+logger.log(constants.loggingType.info, "scope");
 {
     let a1 = 1;
     var a2 = 2;
@@ -82,4 +82,4 @@ var temp2 = 456;
     console.log(`temp2 in TDZ is ${temp2}`);
 }
 console.log(`temp1 is ${temp1}`);
-console.log(`temp2 is ${temp2}`)
+console.log(`temp2 is ${temp2}`);

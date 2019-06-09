@@ -1,3 +1,6 @@
+const logger = require('../service/logger');
+const constants = require('../service/constants');
+
 const transaction = [
     { key: 1, date: "Jan", type: "electricity", custodian: "CL", amount: 100 },
     { key: 2, date: "Jan", type: "water", custodian: "Billy", amount: 200 },
@@ -8,10 +11,10 @@ const transaction = [
     { key: 7, date: "Mar", type: "electricity", custodian: "Carl", amount: 300 },
     { key: 8, date: "Mar", type: "water", custodian: "CL", amount: 600 },
     { key: 9, date: "Mar", type: "rent", custodian: "Billy", amount: 3000 }
-]
+];
 
 // map
-logger.log(constants.loggingType.info, "map")
+logger.log(constants.loggingType.info, "map");
 const mapExample = transaction.map((data) => {
     return data.amount;
 });
@@ -19,7 +22,7 @@ const mapExample = transaction.map((data) => {
 console.log(mapExample);
 
 // filter
-logger.log(constants.loggingType.info, "filter")
+logger.log(constants.loggingType.info, "filter");
 const filterExample = transaction.filter((data) => {
     return data.date === "Jan";
 })
@@ -27,7 +30,7 @@ const filterExample = transaction.filter((data) => {
 console.log(filterExample);
 
 // reduce
-logger.log(constants.loggingType.info, "reduce")
+logger.log(constants.loggingType.info, "reduce");
 const reduceExample = transaction.reduce((sum, data) => {
     return sum + data.amount;
 }, 1) // inital value is set to 1, only for demonstrating purpose
@@ -35,7 +38,7 @@ const reduceExample = transaction.reduce((sum, data) => {
 console.log(reduceExample);
 
 // application 
-logger.log(constants.loggingType.info, "application")
+logger.log(constants.loggingType.info, "application");
 // find out the transaction with lowest cost
 const lowestCostTransaction = transaction.reduce((result, data) => {
     return (result.amount || 999999) < data.amount ? result : data;
